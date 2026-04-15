@@ -64,9 +64,22 @@ public class Explorer {
 		int fullLength = 300;
 		int member = 0;
 
-
 		//ここにwhile文を利用した処理を記述
+		while (member < 5) {
+			if (fullLength <= 0) {
+				//==にすると、歩幅を変更し、300ぴったりにならなくなってしまった際に無限ループへ陥ってしまうため、それを見越して<=とする。
+				member += 1;
+				fullLength = 300;
+			} else if (fullLength == 300) {
+				fullLength -= 50;
+				System.out.println("\n隊長：");
+				System.out.println(member + "人目が渡り始めたよ");
+			} else {
+				fullLength -= 50;
+				System.out.println("まだ渡ってるよ");
+			}
 
+		}
 
 		System.out.println("全員渡り終わったよ！");
 
