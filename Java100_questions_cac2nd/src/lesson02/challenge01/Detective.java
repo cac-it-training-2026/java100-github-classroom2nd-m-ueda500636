@@ -20,16 +20,16 @@ package lesson02.challenge01;
 
 public class Detective {
 
-        public static void main(String[] args) {
+	public static void main(String[] args) {
+		//falseをtrueに変更。
+		boolean request = true;
 
-                boolean request = false;
+		if (request) {
+			System.out.println("依頼主：");
+			System.out.println("あなたを名探偵と見込んで");
+			System.out.println("「盗まれた宝石」の捜索を依頼します。");
+		}
 
-                if (request) {
-                        System.out.println("依頼主：");
-                        System.out.println("あなたを名探偵と見込んで");
-                        System.out.println("「盗まれた宝石」の捜索を依頼します。");
-                }
-
-        }
+	}
 
 }

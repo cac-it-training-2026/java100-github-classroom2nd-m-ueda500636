@@ -22,5 +22,19 @@
 package lesson01.challenge03;
 
 public class Patisserie {
+	public static void main(String[] arg) {
+		//		シトロンの個数を格納する変数をnum1とする。
+		int num1 = 30;
+		//		ショコラの個数を格納する変数をnum2とする。
+		int num2 = 30;
+		//		ピスターシュの個数を格納する変数をnum3とする。
+		int num3 = 30;
+
+		System.out.println("\n 本日のおすすめ商品です。\n");
+		System.out.println("シトロン    　\\250　・・・残り" + num1 + "個");
+		System.out.println("ショコラ      \\280　・・・残り" + num2 + "個");
+		System.out.println("ピスターシュ  \\320　・・・残り" + num3 + "個");
+
+	}
 
 }
