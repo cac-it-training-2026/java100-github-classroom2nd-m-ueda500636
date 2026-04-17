@@ -25,8 +25,8 @@ public class Detective {
 		System.out.println("助手君スケジュールはどうなってるかね？\n");
 
 		boolean appointment = false;
-
-		if (appointment) {
+		//27行目がfalseとなっているため、if(appointment)を、論理否定を用いたif(!appointment)に変更する。
+		if (!appointment) {
 			System.out.println("助手：");
 			System.out.println("いつも空いています。");
 		}

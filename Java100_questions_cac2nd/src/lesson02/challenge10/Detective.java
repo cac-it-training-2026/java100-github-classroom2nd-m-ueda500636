@@ -87,6 +87,17 @@ public class Detective {
 		int num = Integer.parseInt(numStr);
 
 		//ここに記述する
+		//		裏山に続く道が使えなかったということは、犬のいる道を通らないといけない。
+		//		犬の鳴き声が聞こえなかったということは、犬に嫌われやすいN氏ではなく、犬好きのO氏が犯人であると推測した。
+
+		if (num == 1) {
+			numStr = "不正解です";
+		} else {
+			numStr = "正解です。";
+
+		}
+		System.out.println("\n探偵：");
+		System.out.println(numStr);
 
 	}
 
