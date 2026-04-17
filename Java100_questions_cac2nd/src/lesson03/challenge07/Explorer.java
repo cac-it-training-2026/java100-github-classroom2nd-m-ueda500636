@@ -59,8 +59,8 @@
  * <範囲外の手が入力された場合の実行例>
  *
  *  隊長：
- *  そんな手はありませんよ。もう一度入れてください。
- *
+ *  
+ *そんな手はありませんよ。もう一度入れてください。
  */
 
 package lesson03.challenge07;
@@ -83,11 +83,65 @@ public class Explorer {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-
 		//ここにwhile文、if文を利用した処理を記述
+		while (i < 3) {
+			System.out.println("隊長：");
+			System.out.println(" どの手を出して通り抜けますか");
+			System.out.println("（グー… 1 : チョキ… 2 : パー… 3）＞");
 
+			String str = br.readLine();
+			hand = Integer.parseInt(str);
 
-		if (i == 3) {
+			alligator = (int) (Math.random() * 10 % 3) + 1;
+			System.out.println("\n隊長：");
+
+			if (hand == 1) {
+				if (alligator == 1 || alligator == 3) {
+
+					String str1 = (alligator == 2) ? "チョキワニ" : "グーワニ";
+					System.out.println("相手は" + str1 + "でした。");
+					System.out.println((i + 1) + "匹目通り抜け成功！\n");
+					i++;
+				}
+			} else {
+				System.out.println("相手はチョキワニでした");
+			}
+
+		}
+		if (hand == 2) {
+			if (alligator == 1 || alligator == 2) {
+
+				String str2 = (alligator == 2) ? "チョキワニ" : "グーワニ";
+
+				System.out.println("相手は" + str2 + "でした。");
+				System.out.println((i + 1) + "匹目通り抜け成功！");
+				i++;
+			}
+		} else {
+			System.out.println("相手はグーワニでした");
+		}
+		if (hand == 3) {
+			if (alligator == 2 || alligator == 3) {
+
+				String str3 = (alligator == 2) ? "チョキワニ" : "グーワニ";
+
+				System.out.println("相手は" + str3 + "でした。");
+
+				System.out.println((i + 1) + "匹目通り抜け成功！");
+				i++;
+
+			}
+		} else {
+			System.out.println("相手はパーワニでした");
+		}
+
+		if (hand > 3) {
+			System.out.println("そんな手はありませんよ。もう一度入れてください。");
+		}
+
+		if (i == 3)
+
+		{
 			System.out.println("隊長：");
 			System.out.println("川を渡り切りました。");
 		} else {
