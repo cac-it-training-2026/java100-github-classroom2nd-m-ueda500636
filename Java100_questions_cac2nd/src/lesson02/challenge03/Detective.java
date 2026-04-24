@@ -21,8 +21,8 @@ package lesson02.challenge03;
 public class Detective {
 
 	public static void main(String[] args) {
-
-		int budget = 200;
+		//整数型の変数budgetに代入する値を、200から501に変更する。
+		int budget = 501;
 
 		System.out.println("依頼主：");
 		System.out.println("宝石が見つかりましたら");

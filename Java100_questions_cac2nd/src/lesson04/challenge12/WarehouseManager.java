@@ -99,17 +99,31 @@ public class WarehouseManager {
 
 		System.out.println("\n\nでした。直してきます...\n");
 
-
 		//ここに適切な値の挿入処理を記述する
 
+		//入れ替え後の値の合計を表す変数をsum、現在の値の合計を表す変数をwonderfulArraysumとする。		
+		int sum = (1 + 2 + 3 + 4 + 5);
+		int wonderfulArraysum = 0;
+		//対象となる（値が0となる）wonderfulArray{｝の添字を表す変数を、numとする。		
+		int num = 0;
+
+		for (int i = 0; i < wonderfulArray.length; i++) {
+			if (wonderfulArray[i] == 0) {
+				num = i;
+			} else {
+				wonderfulArraysum += wonderfulArray[i];
+			}
+		}
+
+		wonderfulArray[num] = (sum - wonderfulArraysum);
 
 		System.out.println("Yさん：");
 		System.out.println("直してきました。\n");
 
 		System.out.print("ふしコン...");
-		for (int i = 0; i < wonderfulArray.length; i++) {
-			System.out.print(wonderfulArray[i]);
-			if (i != (wonderfulArray.length - 1)) {
+		for (int j = 0; j < wonderfulArray.length; j++) {
+			System.out.print(wonderfulArray[j]);
+			if (j != (wonderfulArray.length - 1)) {
 				System.out.print(",");
 			}
 		}
